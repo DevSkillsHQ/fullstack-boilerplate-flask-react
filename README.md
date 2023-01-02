@@ -11,7 +11,7 @@ Use it for setting up a take-home interview assignment or a portfolio project.
 
 ## Tech Stack
 
-- React 11
+- React 18
 - create-react-app
 - Python 3
 - Flask
