@@ -27,7 +27,7 @@ jobs:
         with:
           build: npm run build
           start: npm run start
-          wait-on: 'npx wait-on --timeout 60000 http://localhost:${{ steps.vars.outputs.port }}/ping'
+          wait-on: 'npx wait-on --timeout 60000 http://localhost:${{ steps.vars.outputs.port }}'
 
   # Verifies the boilerplate can start and run in codespace environment
   test-for-codespaces:
@@ -57,7 +57,7 @@ jobs:
         with:
           build: npm run build
           start: npm run start
-          wait-on: 'npx wait-on --timeout 60000 http://localhost:${{ steps.vars.outputs.port }}/ping'
+          wait-on: 'npx wait-on --timeout 60000 http://localhost:${{ steps.vars.outputs.port }}'
 
   check-dependabot:
     needs:
