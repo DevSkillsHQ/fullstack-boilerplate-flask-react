@@ -1,25 +1,53 @@
-# Fullstack Boilerplate
+# Fullstack Boilerplate Flask/React
 
-Use it for setting up a take-home interview assignment or a portfolio project.
+A backbone for your coding challenge.
 
 ## Contents
 
-- [Backend service](https://github.com/DevSkillsHQ/fullstack-boilerplate-flask-react/tree/main/app-flask) - a Flask service with a `/ping` endpoint. Extend with your code.
-- [Frontend app](https://github.com/DevSkillsHQ/fullstack-boilerplate-flask-react/tree/main/app-react) - a React app. Extend with your code.
-- [E2E test suites](https://github.com/DevSkillsHQ/fullstack-boilerplate-flask-react/tree/main/cypress/integration) - a backend and a frontend Cypress test suites. Extend with your tests.
-- [Pipeline](https://github.com/DevSkillsHQ/fullstack-boilerplate-flask-react/blob/main/.github/workflows/tests.yml) - a test Runner that executes the Cypress tests on push to a branch other than `master`/`main`.
+- [Backend service](app-flask) - a Flask service with a `/ping` endpoint. Extend with your code.
+- [Frontend app](app-react) - a React app. Extend with your code.
+- [E2E test suites](cypress/e2e) - a backend and a frontend Cypress test suites. Extend with your tests.
 
 ## Tech Stack
 
-- React 18
-- create-react-app
-- Python 3
+- React
+- Vite
+- Vitest
+- Python
 - Flask
 - Cypress
 - GitHub Actions
 
+## Getting started
+
+1. Make sure [`python3`](https://www.python.org/downloads/) and [`pip3`](https://pip.pypa.io/en/stable/installing/) are installed on your local env.
+
+2. Make sure npm & node are configured on your local env. You can download those distributions for your platform [here](https://nodejs.org/en/download/)
+
+3. Build your app.
+
+```bash
+npm install
+npm run build # both Flask backend and React frontend
+npm run build:backend # only Flask backend
+npm run build:frontend # only React frontend
+```
+
+4. Start your app.
+
+```bash
+npm install
+npm run start # both Flask backend and React frontend
+npm run start:backend # only Flask backend
+npm run start:frontend # only React frontend
+```
+
+5. Run the Cypress tests.
+
+```bash
+npm run test # run project tests under `cypress/e2e`
+```
+
 ---
 
-Made by [DevSkills](https://devskills.co).
-
-Did you find this repo useful? **Give us a shout on [Twitter](https://twitter.com/DevSkillsHQ) / [LinkedIn](https://www.linkedin.com/company/devskills)**.
+Authored by [Alva Labs](https://www.alvalabs.io/).
