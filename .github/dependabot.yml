@@ -3,15 +3,44 @@ updates:
   - package-ecosystem: "npm"
     directory: "/app-react"
     schedule:
-      interval: "daily"
-    labels:
-      - "npm"
-      - "dependencies"
-
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    groups:
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
+          - "react-test-renderer"
+        update-types:
+          - "major"
+      vite:
+        patterns:
+          - "vite"
+          - "@vitejs/*"
+          - "vitest"
+          - "@vitest/*"
+        update-types:
+          - "major"
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
   - package-ecosystem: "pip"
     directory: "/app-flask"
     schedule:
-      interval: "daily"
-    labels:
-      - "python"
-      - "dependencies"
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    groups:
+      flask:
+        patterns:
+          - "flask"
+          - "werkzeug"
+          - "flask-*"
+        update-types:
+          - "major"
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
